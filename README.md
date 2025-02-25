@@ -2,7 +2,7 @@
 ## Кучер Артем Сергеевич ЭФМО-02-24
 ### Практика 1
 ```
-class FileTextAnalysis:
+class File_Text_Analysis:
     def __init__(self, file_path, search_word):
         self.file_path = file_path
         self.search_word = search_word
@@ -36,21 +36,15 @@ def main():
         match selection1:
             case 1:
                 filepath = input("Укажите путь к текстовому файлу: ")
-                search_word = input("Введите слово для поиска: ")
-                file_analyzer = FileTextAnalysis(filepath, search_word)
-
-                if file_analyzer.read_file():
-                    file_analyzer.count_search_word()
-                    file_analyzer.display_results()
-
                 while (True):
                     selection2 = int(input("1.Найти слово в файле\n2.Закрыть файл\nВыберите действие: "))
                     match selection2:
                         case 1:
                             search_word = input("Введите слово для поиска: ")
-                            file_analyzer.search_word = search_word
-                            file_analyzer.count_search_word()
-                            file_analyzer.display_results()
+                            file_analyzer = File_Text_Analysis(filepath, search_word)
+                            if file_analyzer.read_file():
+                                file_analyzer.count_search_word()
+                                file_analyzer.display_results()
                         case 2:
                             break
             case 2:
