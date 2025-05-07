@@ -1,7 +1,7 @@
 # Programming-of-corporate-industrial-systems-1
 ## Кучер Артем Сергеевич ЭФМО-02-24
 ### Практика 1 
-### Text File Analyzer in Python
+### Анализатор текстовых файлов (Python)
 ### Пример использования
 ```
 1.Открыть файл
